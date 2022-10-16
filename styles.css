@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+
+#game-over {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: red;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: .2px;
+  background-color: rgba(62, 62, 62, 0.738);
+  border: 2px solid rgba(204, 204, 204, 0.437);
+  padding: 1rem 4rem;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+body {
+  background-color: #888;
+  color: #eeeeee;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+}
+
+button:disabled {
+  opacity: .5;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: inherit;
+  border: 1px solid rgb(40, 40, 40);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  cursor: pointer;
+  color: inherit;
+  transition: all .2s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  gap: .2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  box-sizing: border-box;
+}
+
+.square {
+  cursor: crosshair;
+  box-sizing: border-box;
+  border: 1px solid rgb(62, 62, 62);
+  height: 100px;
+  width: 100px;
+  transition: all .2s ease-in;
+}
+
+.goat {
+  background-color: rgba(154, 154, 154, 0);
+  background-image: url(goat.svg);
+  background-size: 80px;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    background-position: 5px 100px;
+  }
+
+  100% {
+    background-position: 10px 5px;
+  }
+}
