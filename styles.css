@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 
 
+:root {
+  --darkreader-neutral-background: #181a1b;
+  --darkreader-neutral-text: #e4e0dc;
+  --darkreader-selection-background: #004daa;
+  --darkreader-selection-text: #e8e6e3;
+}
+
 #game-over {
   width: 100%;
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  color: red;
+  color: rgb(255, 88, 88) !important;
   font-weight: 800;
   font-size: 1.1rem;
   letter-spacing: .2px;
@@ -17,9 +24,11 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
+*,
+html,
 body {
-  background-color: #888;
-  color: #eeeeee;
+  background-color: #181a1b !important;
+  color: #e4e0dc !important;
   font-family: 'Fuzzy Bubbles', cursive;
 }
 
@@ -45,7 +54,7 @@ button {
   height: 30px;
   border-radius: 5px;
   background-color: inherit;
-  border: 1px solid rgb(40, 40, 40);
+  border: 1px solid rgb(136, 127, 73);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-family: inherit;
   cursor: pointer;
@@ -81,14 +90,14 @@ h1 {
 .square {
   cursor: crosshair;
   box-sizing: border-box;
-  border: 1px solid rgb(62, 62, 62);
+  border: 1px solid rgb(136, 127, 73);
   height: 100px;
   width: 100px;
   transition: all .2s ease-in;
 }
 
 .goat {
-  background-color: rgba(154, 154, 154, 0);
+  /*background-color: rgba(154, 154, 154, 0); */
   background-image: url(goat.svg);
   background-size: 80px;
   background-position: 10px 5px;
